@@ -41,10 +41,10 @@ def shopping_list_post():
 	  # print(type(request.form['text']))
 
     if request.method == 'GET':
-      shop_list = []
       return render_template('shopping_list.html')
     elif request.method == 'POST':
           print(request.form['text'].split())
+          shop_list = []
           
           try:
             for item in request.form['text'].split():
